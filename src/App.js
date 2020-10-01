@@ -13,7 +13,13 @@ class App extends Component {
     }
 
     switchNameHandler = () =>{
-        console.log('Was clicked!');
+        // console.log('Was clicked!');
+        // DONT DO THIS this.state.persons[0].name = 'Hairy Larry';
+        this.setState({persons: [
+                {name: 'Hairy Larry', age: 30},
+                {name: 'Max', age: 28},
+                {name: 'Manu', age: 28}
+            ]})
     }
 
     render() {
