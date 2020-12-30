@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from  './Person.css';
+import classes from './Person.css';
 
 // const StyledDiv = styled.div`
 // width: 60%;
