@@ -4,7 +4,11 @@ const cockpit = (props) => {
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
         //http request....
-    } )
+        setTimeout(() => {
+            alert('Saved data to cloud!');
+        },1000)
+    },[] )
+    // you can have as many use effects as you want.
     const assignedClasses = [];
     let btnClass = ''
     if(props.showPersons) {
