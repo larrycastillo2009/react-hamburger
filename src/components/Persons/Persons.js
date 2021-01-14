@@ -3,6 +3,29 @@ import ErrorBoundary from "../../ErrorBoundary /ErrorBoundary";
 import Person from "./Person/Person";
 
 class Persons extends Component {
+// static getDerivedStateFromProps(props,state) {
+//     console.log('[Persons.js] getDerivedStateFromProps')
+//     return state;
+// }
+//       Deprecated not supported
+    // componentWillReceiveProps(nextProps, nextContext) {
+    //     console.log('[Persons.js] componentWillRecieveProps', props);
+    // }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+    console.log('[Persons.js shouldComponentupdate]');
+    return true;
+}
+
+getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log('[Persons.js] get SnapshotBeforeUpdate');
+    return { message: 'Snapshot!' };
+}
+
+componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('[Persons.js] componentDidUpdate');
+    console.log(snapshot);
+}
 
     render() {
         console.log('[Persons.js] rendering...')
