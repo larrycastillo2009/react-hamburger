@@ -6,8 +6,18 @@ const cockpit = (props) => {
         //http request....
         setTimeout(() => {
             alert('Saved data to cloud!');
-        },1000)
-    },[] )
+        },1000);
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect');
+        };
+    },[] );
+
+    useEffect(() => {
+        console.log('[Cockpit.js] 2nd useEffect');
+        return () => {
+            console.log('[Cockpit.js] 2 cleanup work in useEffect');
+        };
+    });
     // you can have as many use effects as you want.
     const assignedClasses = [];
     let btnClass = ''

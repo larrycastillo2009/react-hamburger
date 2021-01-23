@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ErrorBoundary from "../../ErrorBoundary /ErrorBoundary";
 import Person from "./Person/Person";
 
@@ -13,19 +13,23 @@ class Persons extends Component {
     // }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-    console.log('[Persons.js shouldComponentupdate]');
-    return true;
-}
+        console.log('[Persons.js shouldComponentupdate]');
+        return true;
+    }
 
-getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log('[Persons.js] get SnapshotBeforeUpdate');
-    return { message: 'Snapshot!' };
-}
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('[Persons.js] get SnapshotBeforeUpdate');
+        return {message: 'Snapshot!'};
+    }
 
-componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log('[Persons.js] componentDidUpdate');
-    console.log(snapshot);
-}
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('[Persons.js] componentDidUpdate');
+        console.log(snapshot);
+    }
+
+    componentWillUnmount() {
+        console.log('[Persons.js] componentWillUnmount')
+    }
 
     render() {
         console.log('[Persons.js] rendering...')
